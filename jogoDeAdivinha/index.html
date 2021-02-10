@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var numrandom = Math.floor(Math.random() * 100) + 1;
+        var ultimatentativa = document.querySelector('.ultimatentativa');
+        var certoOuErrado = document.querySelector('certoOuErrado');
+        var contaTentativa = 1;
+        var texto = document.createTextNode(" ");
+
+        function enviar() {
+            var numberbox = document.getElementById("numberbox").value;
+            if (contaTentativa == 1) {
+                ultimatentativa = document.createTextNode('Palpites anteriores: ');
+            }
+            ultimatentativa.textContent += numberbox + ' ';
+
+            if (contaTentativa >= 10) {
+                alert('Acabou o Jogo meu rei, tenta de novo aí!!')
+                texto.textContent = '';
+            } else if (numrandom == numberbox) {
+                texto.textContent = "ACERTOUUU!!!";
+            } else if (numberbox > numrandom) {
+                texto.textContent = "ERROOOOOUUUU!!! Valor acima do esperado";
+            } else {
+                texto.textContent = "ERROOOOOUUUU!!! Valor abaixo do esperado";
+            }
+            document.getElementById("response").appendChild(texto);
+            document.querySelector('.ultimatentativa').appendChild(ultimatentativa)
+            contaTentativa++;
+            numberbox.value = '';
+            
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>JOGO DO ADIVINHA</h1>
+        <p> </p>
+        <form action="">
+            Digite seu palpite:
+            <input type="text" name="" id="numberbox" placeholder="(Ex: 77)">
+            <input type="button" value="enviar" onclick="enviar()">
+        </form>
+        <p class="ultimatentativa"></p>
+        <p class="certoOuErrado"></p>
+        <div id="response"></div>
+    </div>
+</body>
+
+</html>

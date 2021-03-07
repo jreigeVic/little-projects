@@ -1,0 +1,94 @@
+body {
+    padding: 0%;
+    margin: 0%;
+    background-color: #f1f1f1;
+}
+
+header {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 20px;
+}
+
+.menu {
+    list-style-type: none;
+    background-color: #181818;
+    padding: 0.25px;
+    padding-left: 10%;
+    margin: 0px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.menu li {
+    float: left;
+}
+
+li a, .dropbtn {
+    color: rgb(241, 241, 241);
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(94, 116, 245);
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: teal;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(241, 241, 241);
+    text-align: left;
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.dropdown-content:hover {
+    background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.column {
+    margin: 10px auto 0px auto;
+    width: 80%;
+    padding: 0px;
+}
+
+.card {
+    background-color: #FFF;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+/*FAKE IMAGE*/
+
+.example-image {
+    background-color: #aaa;
+    width: 100%;
+    padding: auto;
+    text-align: center;
+}
+
+footer {
+    background-color: #eee;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+}
